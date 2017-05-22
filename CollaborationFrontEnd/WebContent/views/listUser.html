@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+table {
+	border-collapse: collapse;
+	width: 50%;
+}
+
+th, td {
+	text-align: left;
+	padding: 8px;
+	
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+th {
+	background-color: #4CAF50;
+	color: white;
+}
+
+body {
+    background-color:#92B6D5;
+}
+</style>
+</head>
+<body>
+<center><table border=3px bgcolor="#BFC9CA"></center>
+<tr>
+
+<th>USER NAME</th>
+<th>ADDRESS</th>
+<th>EMAIL</th>
+<th>MOBILE</th>
+<th>ROLE</th>
+<th>SEND REQUEST</th>
+</tr>
+
+<tr ng-repeat="li in users" ng-controller="UserController as ctrl">
+<td><b>{{li.name}}</b></td>
+<td><b>{{li.address}}</b></td>
+<td><b>{{li.email}}</b></td>
+<td><b>{{li.mobile}}</b></td>
+<td><b>{{li.role}}</b></td>
+<td><a href="" ng-click= "ctrl.registerFriend(li.id)"  class="btn btn-primary">Send Request</a></td>
+
+</tr>
+
+</table>
+<div ng-controller="UserController">
+<h2>{{message}}</h2>
+</div>
+</body>
+</html>

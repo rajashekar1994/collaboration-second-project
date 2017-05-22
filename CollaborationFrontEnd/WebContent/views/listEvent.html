@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+table {
+	border-collapse: collapse;
+	width: 50%;
+}
+
+th, td {
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2
+}
+
+th {
+	background-color: #4CAF50;
+	color: white;
+}
+
+body {
+    background-color:#92B6D5;
+}
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+<center><table border="3px"></center>
+<tr>
+<th>DATE TIME</th>
+<th>DESCRIPTION</th>
+<th>NAME</th>
+<th>VENUE</th>
+
+</tr>
+
+<tr ng-repeat="li in events">
+<td><b>{{li.date_time}}</b></td>
+<td><b>{{li.description}}</b></td>
+<td><b>{{li.name}}</b></td>
+<td><b>{{li.venue}}</b></td>
+
+</tr>
+
+</table>
+<div ng-controller="EventController">
+<h2>{{message}}</h2>
+</div>
+
+</body>
+</html>

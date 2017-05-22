@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+table {
+	border-collapse: collapse;
+	width: 30%;
+}
+
+th, td {
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2
+}
+
+th {
+	background-color: #4CAF50;
+	color: white;
+}
+body {
+    background-color:#92B6D5;
+}
+</style>
+</head>
+<body>
+<h1 style="font-family:courier;"><b>Pending Request</b></h1>
+<table border="3px">
+<tr data-ng-repeat="p in pendingRequest">
+<td>{{p.user_id}}</td>
+
+<td><a href="" data-ng-click="acceptFriend(p.user_id)" class="btn btn-primary">Accept Friend</a>
+<td><a href="" data-ng-click="rejectFriend(p.user_id)" class="btn btn-primary">Reject Friend</a>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

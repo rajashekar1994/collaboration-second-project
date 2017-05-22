@@ -1,0 +1,10 @@
+com\niit\CollaborationRestController\FileUploadController.class
+com\niit\CollaborationRestController\BlogController.class
+com\niit\CollaborationRestController\UserController.class
+com\niit\CollaborationRestController\chat\Message.class
+com\niit\CollaborationRestController\chat\OutputMessage.class
+com\niit\CollaborationRestController\JobController.class
+com\niit\CollaborationRestController\ChatController.class
+com\niit\CollaborationRestController\EventController.class
+com\niit\CollaborationRestController\ForumController.class
+com\niit\CollaborationRestController\FriendController.class

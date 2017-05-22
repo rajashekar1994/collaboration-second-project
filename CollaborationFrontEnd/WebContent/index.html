@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <style>
+body { 
+    background-image: url(bootstrap/image/.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div ng-controller="UserController as ctrl">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span> <strong>collaboration</strong></a>
+    </div>
+<ul class="nav navbar-nav navbar-right">
+
+<li><a href="#/register" ng-hide="currentUser.id"><span class="glyphicon glyphicon-user"></span> sign up</a></li>
+<li><a href="#/listUser" ng-show="currentUser.id">list of user</a><br></li>
+<li><a href="#/blog" ng-show="currentUser.id">blog</a><br></li>
+<li><a href="#/listBlog" ng-show="currentUser.id">list of blogs</a><br></li>
+ <li><a href="#/forum" ng-show="currentUser.id">forum</a><br></li>
+<li><a href="#/listForum" ng-show="currentUser.id">list of Forums</a><br></li>
+<!-- <li><a href="#/friend" ng-show="currentUser.id">friend</a><br></li> -->
+<li><a href="#/listFriend" ng-show="currentUser.id">friends list</a><br></li>
+<li><a href="#/job" ng-show="currentUser.id">job</a><br></li>
+<li><a href="#/listJob" ng-show="currentUser.id">list of jobs</a><br></li>
+<li><a href="#/event" ng-show="currentUser.id">event</a><br></li>
+<li><a href="#/listEvent" ng-show="currentUser.id">list of events</a><br></li>
+<li><a href="#/pendingRequest" ng-show="currentUser.id">pending request</a><br></li>
+
+<li><a href="#/login" ng-hide="currentUser.id"><span class="glyphicon glyphicon-log-in"></span> Existing user? Sign In</a></li>
+
+
+				
+				 <ul class="nav navbar-nav navbar-right">
+					<li ng-show="currentUser.id">
+
+						<a href=""><img alt="image1" src="images/{{currentUser.id}}" class="img-circle" height="65" width="65" alt="Avatar"></a></li>
+				<li class="dropdown" ng-show="currentUser.id">
+			
+<a href="" class="dropdown-toggle" data-toggle="dropdown" ng-show="currentUser.id">
+              {{currentUser.id}}       <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+						<li  ng-show="currentUser.id">
+						<a href="#/uploadPicture" >Upload Picture</a>
+					</li>
+							<li><a href="" ng-click="ctrl.logout()"><span class="fa fa-sign-out">logout</span></a></li>
+							
+				
+					
+<!-- <li><a ng-click = "ctrl.logout()">Logout</a></li> -->
+<!-- <li ng-show="currentUser.id"><a href="#/uploadPicture" >Upload Picture</a></li> -->
+
+
+</ul>
+<hr>
+</li>
+</ul>
+</ul>
+</div>
+</nav>
+
+<div ng-view></div>
+</div>
+</body>
+
+<script src="lib/angular.min.js"></script>
+<script src="lib/angular-route.js"></script>
+<script src="lib/angular-cookies.js"></script>
+<script src="lib/jquery-3.1.1.min.js"></script>
+
+
+<script src="js/app.js"></script>
+<script src="js/UserController.js"></script>
+<script src="js/UserService.js"></script>
+<script src="js/BlogController.js"></script>
+<script src="js/BlogService.js"></script>
+<script src="js/ForumController.js"></script>
+<script src="js/ForumService.js"></script>
+<script src="js/JobController.js"></script>
+<script src="js/JobService.js"></script>
+<script src="js/FriendController.js"></script>
+<script src="js/FriendService.js"></script>
+<script src="js/EventController.js"></script>
+<script src="js/EventService.js"></script>
+<script type="text/javascript" src="js/chatservice.js"></script>
+<script type="text/javascript" src="js/chatcontroller.js"></script>
+<script type="text/javascript" src="js/sockjs.js"></script>
+<script type="text/javascript" src="js/stomp.js"></script>
+
+
+</html>

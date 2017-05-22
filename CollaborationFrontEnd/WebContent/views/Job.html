@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+	<style>
+body { 
+    background-image: url(bootstrap/image/.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+</style>
+	
+<style>
+table {
+	border-collapse: collapse;
+	width: 30%;
+}
+
+th, td {
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2
+}
+
+th {
+	background-color: #4CAF50;
+	color: white;
+}
+body {
+    background-color:#DFCFBE;
+}
+</style>
+
+</head>
+<body>
+<h2 style="font-family:courier;"><b>Post job.....</b></h2>
+
+<div ng-controller = "JobController as ctrl">
+<form class="form" name="form" ng-submit="ctrl.registerJob()" role="form">
+<table border="3px">
+
+<tr>
+<td><b>user id</b></td>
+<td><input type="user_id" ng-model="job.user_id" required="true"></td>
+</tr>
+<tr>
+<td><b>description</b></td>
+<td><textarea ng-model="job.description" rows="4" cols="50" required="true"></textarea></td>
+</tr>
+
+<tr>
+<td><b>qualification</b></td>
+<td><input typr="qualification" ng-model="job.qualification" required="true"> </td>
+</tr>
+
+<tr>
+<td><b>title</b></td>
+<td> <input type="title" ng-model="job.title" required="true"></td>
+</tr>
+
+<tr>
+<td><b>date_time</b></td>
+<td><input typr="date_time" ng-model="job.date_time" required="true"> </td>
+</tr>
+
+<tr>
+
+<td> <input class="btn btn-success" value="submit" type="submit"></td>
+<td> <input class="btn btn-warning" type="reset" ></td>
+</tr>
+
+
+
+
+
+
+</table>
+</form>
+</div>
+</body>
+</html>

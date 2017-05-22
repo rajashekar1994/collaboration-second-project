@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<style>
+body { 
+    background-image: url(bootstrap/image/.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+</style>
+	
+	
+	
+<style>
+table {
+	border-collapse: collapse;
+	width: 30%;
+}
+
+th, td {
+	text-align: left;
+	padding: 8px;
+	background-color: #f2f2f2
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2
+}
+
+th {
+	background-color: #4CAF50;
+	color: white;
+}
+body {
+    background-color:#DFCFBE;
+}
+</style>
+
+</head>
+<body>
+<h2 style="font-family:courier;"><b>Create your own blog below.....</b></h2>
+
+
+<div ng-controller = "BlogController as ctrl">
+<form class="form" name="form" ng-submit="ctrl.registerBlog()" role="form">
+<table border="3px">
+
+
+<tr>
+<td><b>title</b></td>
+<td><input type="title" ng-model="blog.title" required="true"></td>
+</tr>
+
+
+
+
+
+<tr>
+
+<td><b>description</b></td>
+
+<!-- <td><input type="description" ng-model="blog.description" required="true"></td> -->
+<td><textarea ng-model="blog.description" required="true" rows="4" cols="50"></textarea></td>
+
+</tr>
+
+<tr>
+<td><b>date_time</b></td>
+<td><input type="date_time" ng-model="blog.date_time" required="true"> </td>
+</tr>
+
+<tr>
+<td><b>user id</b></td>
+<td><input type="user_id" ng-model="blog.user_id" required="true"></td>
+</tr>
+
+<tr>
+
+<td> <input value="submit" type="submit" class="btn btn-success"></td>
+<td> <input type="reset" class="btn btn-warning"></td>
+</tr>
+
+</table>
+
+</form>
+</div>
+</body>
+</html>
